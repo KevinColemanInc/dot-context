@@ -47,3 +47,4 @@ types-s3transfer==0.10.1
 typing_extensions==4.12.2
 urllib3==2.2.2
 yarl==1.9.4
+watchdog==4.0.2
