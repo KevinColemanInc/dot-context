@@ -1,18 +1,8 @@
 class ContextManager:
     def __init__(self):
         # Initialize the context array with some default strings (can be empty)
-        self.context = [
-            {
-                # "filename": "example/vite/src/components/.context",
-                # "context": "..",
-            }
-        ]
-        self.inst = [
-            {
-                # "filename": "example/vite/src/components/ChatArea.tsx.inst",
-                # "inst": "..",
-            }
-        ]
+        self.context = []
+        self.inst = []
 
     def add_context(self, new_context):
         """Add a new string to the context array."""
@@ -37,11 +27,7 @@ class ContextManager:
         self.context = []
 
     def set_inst(self, new_inst):
-        """Add a new string to the inst array."""
-        if isinstance(new_inst, str):
-            self.context.append(new_inst)
-        else:
-            raise ValueError("Only strings can be added to inst")
+        self.inst = new_inst
 
     def remove_inst(self, inst_to_remove):
         """Remove a string from the context array."""
