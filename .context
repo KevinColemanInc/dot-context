@@ -2,7 +2,7 @@ this is a translation chat application. when a user types a message, an api tran
 
 Use tailwind, react, vite, and typescript
 
-@import package.json
+@import example/vite/package.json
 
 primary colors are:
 primary color: #3728af

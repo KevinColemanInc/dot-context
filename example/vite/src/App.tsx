@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ChatArea from "./components/ChatArea";
+import TodoList from "./components/TodoList";
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col w-full min-h-screen text-gray-800">
       <Header />
 
-      <main className="flex flex-1 justify-center items-center p-4">
-        <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg">
-          <ChatArea languages={["en"]} contexts={[]} />
+      <main className="flex flex-1 justify-center items-center p-4 w-full max-h-screen">
+        <div className="w-full max-w-screen max-h-screen">
+          <TodoList />
         </div>
       </main>
 

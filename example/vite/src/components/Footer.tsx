@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary text-white py-6">
+    <footer className=" text-green-100 py-6 bg-green-900">
       <div className="container mx-auto px-6">
         {/* Footer Title */}
         <h2 className="text-xl font-bold text-center mb-4">CheckMate</h2>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           <p className="hover:text-secondary">
             Email us:{" "}
             <a href="mailto:dev@698expat.com" className="hover:text-secondary">
-              dev@698expat.com
+              support@checkmate.internal
             </a>
           </p>
         </div>
