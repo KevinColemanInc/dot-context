@@ -19,9 +19,9 @@ def main(inst_file_path):
     code_generator = CodeGenerator(messages)
     llm_response = code_generator.generate_code()
 
-    # Step 4: Extract the code and persist to disk
+    # Step 4: Persist the generated code to the disk
     code_executor = CodeExecutor()
-    code_executor.extract_code(llm_response, inst_file_path)
+    code_executor.persist_code(llm_response, inst_file_path)
 
 
 

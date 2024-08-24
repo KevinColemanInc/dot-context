@@ -21,7 +21,7 @@ class PromptConstructor:
             "Please use this information to understand the structure and purpose of each component."
         )
 
-        user_message_content = "Please proceed with the instructions provided."
+        user_message_content = "Please respond only with the code based on the instruction. I do not any context being included in the response."
 
         messages = [
             ChatMessage(content=system_message_content.strip(), role="system"),
