@@ -20,7 +20,7 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-full max-w-md mx-auto p-4  rounded-lg bg-green-50">
+    <div className="flex flex-col w-full max-w-md mx-auto p-4  rounded-lg bg-green-50 text-2xl">
       <h3 className="text-lg font-bold mb-4">To-Do List</h3>
       <div className="flex mb-4">
         <input
