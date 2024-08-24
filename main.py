@@ -4,7 +4,7 @@ import sys
 from file_importer import import_files
 from dto.prompt_constructor import PromptConstructor
 
-# from prompt_constructor import PromptConstructor
+from dto.code_generator import CodeGenerator
 
 
 # Main process file
@@ -19,8 +19,10 @@ def main(inst_file_path):
     print(messages)
 
     # # Step 3: Generate the code using the CodeGenerator
-    # code_generator = CodeGenerator(messages)
-    # code_generator.generate_code(inst_file_path)
+    code_generator = CodeGenerator(messages)
+    res = code_generator.generate_code()
+
+    print(res)
 
 
 if __name__ == "__main__":
