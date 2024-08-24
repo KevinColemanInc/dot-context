@@ -5,6 +5,7 @@ from file_importer import import_files
 from dto.prompt_constructor import PromptConstructor
 
 from dto.code_generator import CodeGenerator
+from dto.code_executor import CodeExecutor
 
 
 # Main process file
@@ -20,9 +21,11 @@ def main(inst_file_path):
 
     # # Step 3: Generate the code using the CodeGenerator
     code_generator = CodeGenerator(messages)
-    res = code_generator.generate_code()
+    llm_response = code_generator.generate_code()
 
-    print(res)
+    # Step 4: Persist the generated code to the disk
+    code_executor = CodeExecutor()
+    code_executor.persist_code(llm_response, inst_file_path)
 
 
 if __name__ == "__main__":
