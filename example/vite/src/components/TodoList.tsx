@@ -45,7 +45,7 @@ const TodoList: React.FC = () => {
               onClick={() => deleteTodo(index)}
               className="text-red-600 hover:text-red-800"
             >
-              Check!
+              ⏹️ Check
             </button>
           </li>
         ))}
