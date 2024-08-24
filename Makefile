@@ -3,3 +3,8 @@ help:
 
 watch: ## watches the directory for changes and executes instructions
 	python -m watch
+
+example: vite ## runs the example project
+
+vite: ## runs the vite project
+	cd example/vite && npm run dev

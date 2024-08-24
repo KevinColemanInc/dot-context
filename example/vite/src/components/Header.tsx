@@ -1,13 +1,4 @@
-// generate a header component. title is 698 Expat. there is no logo.
-
-// menu items:
-// - Home
-// - about
-// - demo
-
-// ----
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
@@ -20,19 +11,19 @@ const Header: React.FC = () => {
         <nav>
           <ul className="flex space-x-8">
             <li>
-              <Link to="/" className="hover:text-secondary">
+              <a href={`/`} className="hover:text-secondary">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/about" className="hover:text-secondary">
+              <a href={`/`} className="hover:text-secondary">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/demo" className="hover:text-secondary">
+              <a href={`/`} className="hover:text-secondary">
                 Demo
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
