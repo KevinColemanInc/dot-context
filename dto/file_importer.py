@@ -1,7 +1,7 @@
 import os
 import string
 
-from dto.context_manager import ContextManager
+from context_manager import ContextManager
 
 def import_files(InstFilePath:string) -> ContextManager:
     """Given filepath for .inst file, return contextmanager
