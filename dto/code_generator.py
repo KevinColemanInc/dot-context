@@ -10,7 +10,7 @@ class CodeGenerator:
         )
 
     def generate_code(self):
-        self.client.text_gen.create_chat_completion_stream(
+        response = self.client.text_gen.create_chat_completion_stream(
             max_tokens=65536,
             messages=self.messages,
             model="meta-llama-3.1-405b-instruct",
@@ -18,3 +18,5 @@ class CodeGenerator:
             temperature=0,
             top_p=1,
         )
+
+        return response
