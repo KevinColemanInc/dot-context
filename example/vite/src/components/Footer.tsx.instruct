@@ -8,7 +8,5 @@ menu items:
 - about us (built in seattle)
 - email us: dev@698expat.com
 
-@import ./Compontents/Logo.tsx
-
 terms of service should be on the left
 2 columns
