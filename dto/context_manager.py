@@ -51,7 +51,7 @@ class ContextManager:
             raise ValueError("The specified intst does not exist in the array")
 
     def get_inst(self):
-        """Retrieve the current context array."""
+        """Retrieve the current inst array."""
         return self.inst
 
     def clear_inst(self):
