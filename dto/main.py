@@ -1,6 +1,7 @@
 import sys
 
 from code_generator import CodeGenerator
+from code_executor import CodeExecutor
 from file_importer import import_files
 from prompt_constructor import PromptConstructor
 
@@ -16,7 +17,12 @@ def main(inst_file_path):
 
     # Step 3: Generate the code using the CodeGenerator
     code_generator = CodeGenerator(messages)
-    code_generator.generate_code()
+    llm_response = code_generator.generate_code()
+
+    # Step 4: Persist the generated code to the disk
+    code_executor = CodeExecutor()
+    code_executor.persist_code(llm_response, inst_file_path)
+
 
 
 if __name__ == "__main__":

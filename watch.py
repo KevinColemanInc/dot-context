@@ -25,8 +25,11 @@ class Watcher:
 class Handler(FileSystemEventHandler):
     def on_modified(self, event):
         if not event.is_directory:
-            print(f"File {event.src_path} has been modified.")
-            subprocess.run(["python", "-m", "test", event.src_path])
+            if event.src_path.endswith(".instruct"):
+                print(f"File {event.src_path} has been modified.")
+                subprocess.run(["python", "-m", "main", event.src_path])
+            else:
+                print(f"Ignored file {event.src_path}; not an .instruct file.")
 
 
 if __name__ == "__main__":
