@@ -10,10 +10,9 @@ def import_files(InstFilePath:string) -> ContextManager:
     
     # put inst filename and contents into contextmanager
     abspathinst =  os.path.abspath(InstFilePath)
-    inst = '\'' + abspathinst + '\': '
     file = open(abspathinst,'r')
     instfilecontents = file.read()
-    inst += instfilecontents
+    inst = instfilecontents
     contextmanager.set_inst(inst)
     
     dirpath = os.path.dirname(abspathinst)
@@ -24,16 +23,15 @@ def import_files(InstFilePath:string) -> ContextManager:
             if name.endswith('.context'):
                 # put const filename and contents into contextmanager
                 currentfile = os.path.abspath(name)
-                context = '\'' + currentfile + '\': '
                 file = open(currentfile,'r')
                 filecontents = file.read()
-                context += filecontents
+                context = filecontents
                 contextmanager.add_context(context)
     return contextmanager
 
 
 # test code
-# contextmanager = import_files("inst file")
+# contextmanager = import_files("instfile")
 # for context in contextmanager.get_context():
 #     print(context)
 # for instruct in contextmanager.get_inst():
