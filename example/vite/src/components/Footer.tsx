@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="bg-primary text-white py-6">
       <div className="container mx-auto px-6">
         {/* Footer Title */}
-        <h2 className="text-xl font-bold text-center mb-4">698 Expat</h2>
+        <h2 className="text-xl font-bold text-center mb-4">CheckMate</h2>
 
         {/* Navigation Menu */}
         <nav className="text-center mb-4">
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <a href="#" className="hover:text-secondary">
-                Copyright 698 Expat
+                Copyright CheckMate
               </a>
             </li>
             <li>
