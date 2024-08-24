@@ -1,0 +1,77 @@
+{
+    "name": "Instruct",
+    "scopeName": "text.instruct",
+    "patterns": [
+        {
+            "name": "keyword.control.import.instruct",
+            "match": "@import\\s+(.+)$",
+            "captures": {
+                "1": {
+                    "name": "string.quoted.double.instruct"
+                }
+            }
+        },
+        {
+            "begin": "^<!--\\s*#region\\b",
+            "beginCaptures": {
+                "0": {
+                    "name": "keyword.control.region.instruct"
+                }
+            },
+            "end": "^<!--\\s*#endregion\\b",
+            "endCaptures": {
+                "0": {
+                    "name": "keyword.control.endregion.instruct"
+                }
+            },
+            "name": "meta.region.instruct"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#keywords"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.instruct",
+                    "begin": "//",
+                    "end": "$",
+                    "patterns": [
+                        {
+                            "include": "#inline-comments"
+                        }
+                    ]
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.instruct",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "include": "#escape-sequences"
+                        }
+                    ]
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.instruct",
+                    "match": "\\b(if|else|for|while|return)\\b"
+                }
+            ]
+        }
+    }
+}
