@@ -13,7 +13,7 @@ class CodeGenerator:
         self.client = OctoAI(api_key=os.getenv("OCTOAI_API_KEY"))
 
     def generate_code(self):
-        response = self.client.text_gen.create_chat_completion_stream(
+        response = self.client.text_gen.create_chat_completion(
             max_tokens=65536,
             messages=self.messages,
             model="meta-llama-3.1-405b-instruct",
@@ -22,4 +22,4 @@ class CodeGenerator:
             top_p=1,
         )
 
-        return response
+        return response.dict()["choices"][0]["message"]["content"]

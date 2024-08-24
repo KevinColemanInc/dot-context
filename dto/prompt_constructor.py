@@ -21,7 +21,29 @@ class PromptConstructor:
             "Please use this information to understand the structure and purpose of each component."
         )
 
-        user_message_content = "Please respond only with the code based on the instruction. I do not any context being included in the response."
+        user_message_content = """
+            Please respond only with the code based on the instruction. Do not wrap the code as a code block in the response.
+            
+            Valid output example:
+            
+            // src/components/Footer.tsx
+            
+            import React from 'react';
+
+            const Footer = () => {
+            return (
+                ...
+            
+            Invalid output example:
+            ```typescript
+                // src/components/Footer.tsx
+                
+                import React from 'react';
+
+                const Footer = () => {
+                return (
+                    ...
+            """
 
         messages = [
             ChatMessage(content=system_message_content.strip(), role="system"),
