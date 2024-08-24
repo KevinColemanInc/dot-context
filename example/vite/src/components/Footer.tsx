@@ -1,51 +1,48 @@
+// src/components/Footer.tsx
+
 import React from "react";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className=" text-green-100 py-6 bg-green-900">
-      <div className="container mx-auto px-6">
-        {/* Footer Title */}
-        <h2 className="text-xl font-bold text-center mb-4">CheckMate</h2>
-
-        {/* Navigation Menu */}
-        <nav className="text-center mb-4">
-          <ul className="flex flex-wrap justify-center space-x-6">
-            <li>
-              <a href="#" className="hover:text-secondary">
+    <footer className="bg-[#3728af] text-white p-4">
+      <div className="container mx-auto p-4 flex flex-wrap justify-between">
+        <div className="w-full lg:w-1/2 xl:w-1/2 md:w-1/2 mb-6 lg:mb-0">
+          <h6 className="uppercase text-gray-200 font-bold mb-4">
+            Terms of Service
+          </h6>
+          <ul>
+            <li className="mt-2">
+              <a href="/tos" className="text-gray-200 hover:text-white">
                 Terms of Service
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-secondary">
-                Copyright CheckMate
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-secondary">
+            <li className="mt-2">
+              <a href="/privacy" className="text-gray-200 hover:text-white">
                 Privacy Policy
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-secondary">
+          </ul>
+        </div>
+        <div className="w-full lg:w-1/2 xl:w-1/2 md:w-1/2 mb-6 lg:mb-0">
+          <h6 className="uppercase text-gray-200 font-bold mb-4">About Us</h6>
+          <ul>
+            <li className="mt-2">
+              <a href="/contact" className="text-gray-200 hover:text-white">
                 Contact Us
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-secondary">
-                About Us (Built in Seattle)
+            <li className="mt-2">Built in Seattle</li>
+            <li className="mt-2">
+              <a
+                href="mailto:dev@698expat.com"
+                className="text-gray-200 hover:text-white"
+              >
+                Email Us: dev@698expat.com
               </a>
             </li>
+            <li className="mt-2">Made with love in Seattle</li>
+            <li className="mt-2">&copy; CheckMate</li>
           </ul>
-        </nav>
-
-        {/* Contact Information */}
-        <div className="text-center">
-          <p className="hover:text-secondary">
-            Email us:{" "}
-            <a href="mailto:dev@698expat.com" className="hover:text-secondary">
-              support@checkmate.internal
-            </a>
-          </p>
         </div>
       </div>
     </footer>
