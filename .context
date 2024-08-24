@@ -1,0 +1,7 @@
+this is a translation chat application. when a user types amessage, an api translates the message and sends it back.
+
+Use tailwind, react, vite, and typescript
+
+primary colors are:
+primary color: #3728af
+secondary color: #af6c03
