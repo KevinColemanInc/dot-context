@@ -1,20 +1,3 @@
-// generate a footer component. title is 698 Expat. there is no logo.
-
-// import
-// component/logo
-
-// menu items:
-// - Terms of Service linkts to /tos
-// - Copyright 698 Expat no link
-// - Privacy policy links to /privacy
-// - Contact us links to /contact
-// - about us (built in seattle)
-// - email us: dev@698expat.com
-
-// terms of service should be on the left
-// 2 columns
-
-// ----
 import React from "react";
 
 const Footer: React.FC = () => {
