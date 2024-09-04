@@ -8,3 +8,6 @@ example: vite ## runs the example project
 
 vite: ## runs the vite project
 	cd example/vite && npm run dev
+
+install: ## installs the project with pip3
+	pip3 install -e .

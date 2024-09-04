@@ -1,8 +1,8 @@
-import sys
 import time
+import subprocess
+
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-import subprocess
 
 
 class Watcher:

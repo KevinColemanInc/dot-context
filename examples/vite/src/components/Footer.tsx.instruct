@@ -1,0 +1,13 @@
+generate a footer component. title is CheckMate todos. there is no logo.
+
+menu items:
+- Terms of Service to /tos
+- Copyright CheckMate
+- Privacy policy links to /privacy
+- Built in Redmond, WA
+- Contact us
+
+terms of service should be on the left
+only have 2 column
+
+@import example/vite/src/components/Footer.tsx

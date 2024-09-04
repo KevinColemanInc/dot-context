@@ -1,13 +1,10 @@
-import sys
-
-from code_generator import CodeGenerator
-from code_executor import CodeExecutor
-from file_importer import import_files
-from prompt_constructor import PromptConstructor
+from dotcontext.run.code_generator import CodeGenerator
+from dotcontext.run.code_executor import CodeExecutor
+from dotcontext.run.file_importer import import_files
+from dotcontext.run.prompt_constructor import PromptConstructor
 
 
-# Main process file
-def main(inst_file_path):
+def run(inst_file_path):
     # Step 1: Import files and populate the ContextManager
     context_manager = import_files(inst_file_path)
 
@@ -22,12 +19,3 @@ def main(inst_file_path):
     # Step 4: Persist the generated code to the disk
     code_executor = CodeExecutor()
     code_executor.persist_code(llm_response, inst_file_path)
-
-
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python main.py <path_to_inst_file>")
-    else:
-        inst_file_path = sys.argv[1]
-        main(inst_file_path)

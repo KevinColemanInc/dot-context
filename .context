@@ -5,5 +5,5 @@ Use tailwind, react, vite, and typescript
 @import example/vite/package.json
 
 primary colors are:
-primary color: #3728af
-secondary color: #af6c03
+primary color: light green
+secondary color: dark green

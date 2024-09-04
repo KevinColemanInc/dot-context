@@ -3,7 +3,7 @@ import * as path from "path";
 import * as fs from "fs";
 
 export class PreviewProvider implements vscode.TextDocumentContentProvider {
-  private static readonly viewType = "instruct.preview";
+  public static readonly viewType = "instruct.preview";
   private readonly _onDidChange = new vscode.EventEmitter<vscode.Uri>();
   readonly onDidChange = this._onDidChange.event;
 

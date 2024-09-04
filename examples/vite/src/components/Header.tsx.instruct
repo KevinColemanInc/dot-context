@@ -1,8 +1,9 @@
 generate a header component. title is CheckMate. there is no logo.
 
 menu items:
-- Home
-- about
-- demo
+- Demo
+- Pricing
+
+@import example/vite/src/components/Header.tsx
 
 ----
