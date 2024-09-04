@@ -1,9 +1,13 @@
 this is a translation chat application. when a user types a message, an api translates the message and sends it back.
 
-Use tailwind, react, vite, and typescript
+Use tailwind for css and colors, react, vite, and typescript
 
-@import example/vite/package.json
+@import examples/vite/package.json
 
 primary colors are:
-primary color: light green
-secondary color: dark green
+primary color: bg-green-50
+secondary color: bg-green-900
+links are blue
+text is black
+ensure proper padding. be beautiful. be artistic. be thoughtful. be centered. lots of space and padding and margin
+no decorators
