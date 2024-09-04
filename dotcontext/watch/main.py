@@ -27,7 +27,7 @@ class Handler(FileSystemEventHandler):
         if not event.is_directory:
             if event.src_path.endswith(".instruct"):
                 print(f"File {event.src_path} has been modified.")
-                subprocess.run(["python", "-m", "main", event.src_path])
+                subprocess.run(["dotcontext", "run", event.src_path])
             else:
                 print(f"Ignored file {event.src_path}; not an .instruct file.")
 
