@@ -37,7 +37,7 @@ Now whenever the .instruct file is saved, the corresponding file will overwritte
 instructs dot-context to include this file in the LLM request
 
 ```
-@import example/vite/package.json
+@import examples/vite/package.json
 ```
 
 # Visual Studio Code Extension

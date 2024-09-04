@@ -4,6 +4,6 @@ menu items:
 - Demo
 - Pricing
 
-@import example/vite/src/components/Header.tsx
+@import examples/vite/src/components/Header.tsx
 
 ----
