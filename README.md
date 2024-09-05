@@ -1,16 +1,16 @@
 Dot Context is a code-gen engine interfacing users by natural languages.
 
 ```
-$ python -m main 'example/vite/src/components/Footer.tsx.instruct'
+$ dotcontext watch .
 ```
 
-### Demo
+## Demo
 
-### Quick start
+## Quick start
 
 In your project directory, start the file watcher:
 
-# Installation
+## Installation
 
 ```
 $ pip3 install dotcontext
@@ -23,16 +23,14 @@ $ export OPENAI_API_KEY=...
 Now run this in your project directory:
 
 ```
-$ dotcontext watch
+$ dotcontext watch .
 ```
 
-Now every time a `*.instruct` file is updated, an LLM will be called to update the `*` file based on those instructions
+Whenever a `*.instruct` file is saved, an LLM will automatically update the corresponding file based on the instructions. The original file will be overwritten.
 
-Now whenever the .instruct file is saved, the corresponding file will overwritten
+**Warning:** Use this only with projects under version control (e.g., Git), as it will overwrite files.
 
-**Warning:** Please only use this on projects with git enabled, because it will overwrite files
-
-## doctInstruction schema
+### dot-context schema
 
 instructs dot-context to include this file in the LLM request
 
@@ -45,8 +43,6 @@ instructs dot-context to include this file in the LLM request
 Install the extension to get proper linting for the .instruction and .context files: [Install link](https://marketplace.visualstudio.com/items?itemName=DotContext.dot-context)
 
 This is a mono-repo. the source code for the vs-code exension can be found in `./vs-code-ext`
-
-### Contribution
 
 ### Contributors
 
