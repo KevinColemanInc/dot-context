@@ -9,8 +9,8 @@ column 2:
     - Contact us link to mailto:kevin@sparkstart.io
     - about us
     - github link to https://github.com/kevincolemaninc/dot-context
-    - Built in Redmond, WA.
+    - Built in Redmond, WA
 
+terms of service should be on the right
 
-terms of service should be on the left
 @import examples/vite/src/components/Footer.tsx.instruct

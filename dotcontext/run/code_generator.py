@@ -13,14 +13,16 @@ class CodeGenerator:
         elif os.getenv("AZURE_OPENAI_ENDPOINT"):
             from langchain_openai import AzureChatOpenAI
 
-            model = AzureChatOpenAI(
-                azure_deployment="gpt-35-turbo",
-                api_version="2023-06-01-preview"
+            self.langChainChat = AzureChatOpenAI(
+                azure_deployment="gpt-35-turbo", api_version="2023-06-01-preview"
             )
-            self.azureChat = model
+        elif os.getenv("OPENAI_API_KEY"):
+            from langchain_openai import ChatOpenAI
+
+            self.langChainChat = ChatOpenAI(model="gpt-4o-mini")
 
     def generate_code(self):
-        if hasattr(self, 'octoAI'):
+        if hasattr(self, "octoAI"):
             response = self.octoAI.text_gen.create_chat_completion(
                 max_tokens=65536,
                 messages=self.messages,
@@ -38,9 +40,9 @@ class CodeGenerator:
                 HumanMessage(content=self.messages[0].content),
                 SystemMessage(content=self.messages[1].content),
             ]
-            response = self.azureChat.invoke(langChainMessages)
+            response = self.langChainChat.invoke(langChainMessages)
             print("\n\n" + langChainMessages[0].content + "\n---\n")
             print("\n\n" + langChainMessages[1].content + "\n---\n")
-            print("\n\n" + response.content+ "\n")
+            print("\n\n" + response.content + "\n")
 
             return response.content
