@@ -5,8 +5,9 @@ Mantain instructions, not code.
 ```
 $ dotcontext watch .
 ```
-
 ## Demo
+
+https://github.com/user-attachments/assets/315b85b4-d74b-48cd-906c-878e6c8b2b64
 
 ## Quick start
 
