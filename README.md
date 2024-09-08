@@ -5,6 +5,10 @@ Mantain instructions, not code.
 ```
 $ dotcontext watch .
 ```
+
+![diagram drawio](https://github.com/user-attachments/assets/9957f037-ae4c-4e04-bd8f-6e086f7cac8c)
+
+
 ## Demo
 
 https://github.com/user-attachments/assets/315b85b4-d74b-48cd-906c-878e6c8b2b64
